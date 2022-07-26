@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from sities.models import City
+
+
+@admin.register(City)
+class ShopAdmin(admin.ModelAdmin):
+    list_display = ['id', 'name']
